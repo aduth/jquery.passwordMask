@@ -61,9 +61,9 @@
         if (typeof this._options === 'string') {
             // String -> jQuery selector
             $toggler = $(this._options);
-        } else if ($.isPlainObject(this._options) && this._options.hasOwnProperty('$toggler')) {
+        } else if ($.isPlainObject(this._options) && this._options.hasOwnProperty('toggler')) {
             // Object -> pull "$toggler" property
-            togglerOptProp = this._options.$toggler;
+            togglerOptProp = this._options.toggler;
 
             if (togglerOptProp instanceof $) {
                 // jQuery instance -> set directly
