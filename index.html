@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=EDGE">
+
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+        <title>jquery.passwordMask Demo</title>
+
+        <link rel="stylesheet" href="css/prettify.css">
+        <link rel="stylesheet" href="css/docs.css">
+    </head>
+    <body onload="prettyPrint()">
+
+        <div class="container">
+            <header class="page-header">
+                jquery.passwordMask Demo
+            </header>
+
+            <section class="example">
+                <div>
+                    <h2>Default (no options)</h2>
+                    <input type="password" id="pwd_noparam">
+                </div>
+
+                <pre class="prettyprint linenums">
+&lt;input type="password" id="pwd_noparam"&gt;
+
+&lt;script&gt;
+    $(document).ready(function() {
+        $('#pwd_noparam').passwordMask();
+    });
+&lt;/script&gt;</pre>
+            </section>
+
+            <section class="example">
+                <div>
+                    <h2>Shown by default</h2>
+                    <input type="password" id="pwd_shown">
+                </div>
+
+                <pre class="prettyprint linenums">
+&lt;input type="password" id="pwd_shown"&gt;
+
+&lt;script&gt;
+    $(document).ready(function() {
+        $('#pwd_shown').passwordMask({ isShown: true });
+    });
+&lt;/script&gt;</pre>
+            </section>
+
+            <section class="example">
+                <div>
+                    <h2>Custom toggle text</h2>
+                    <input type="password" id="pwd_customtext">
+                </div>
+
+                <pre class="prettyprint linenums">
+&lt;input type="password" id="pwd_customtext"&gt;
+
+&lt;script&gt;
+    $(document).ready(function() {
+        $('#pwd_customtext').passwordMask({ toggleText: 'Make password visible' });
+    });
+&lt;/script&gt;</pre>
+            </section>
+
+            <section class="example">
+                <div>
+                    <h2>Custom toggler</h2>
+                    <input type="password" id="pwd_customtoggle">
+                    <button id="btn_toggler">Toggle Password Visibility</button>
+                </div>
+
+                <pre class="prettyprint linenums">
+&lt;input type="password" id="pwd_customtoggle"&gt;
+&lt;button id="btn_toggler"&gt;Toggle Password Visibility&lt;/button&gt;
+
+&lt;script&gt;
+    $(document).ready(function() {
+        $('#pwd_customtoggle').passwordMask('#btn_toggler');
+        // OR: $('#pwd_customtoggle').passwordMask($('#btn_toggler'));
+        // OR: $('#pwd_customtoggle').passwordMask({ toggler: '#btn_toggler' });
+        // OR: $('#pwd_customtoggle').passwordMask({ toggler: $('#btn_toggler') });
+    });
+&lt;/script&gt;</pre>
+            </section>
+
+            <section class="example">
+
+            </section>
+        </div>
+
+        <script src="js/prettify.js"></script>
+        <script src="js/jQuery-1.8.2.min.js"></script>
+        <script src="../jquery.passwordMask.js"></script>
+        <script>
+        $(function() {
+            $('#pwd_noparam').passwordMask();
+            $('#pwd_shown').passwordMask({ isShown: true });
+            $('#pwd_customtext').passwordMask({ toggleText: 'Make password visible' });
+            $('#pwd_customtoggle').passwordMask('#btn_toggler');
+        });
+        </script>
+    </body>
+</html>

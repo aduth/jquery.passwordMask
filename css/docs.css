@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
+html {    
+    font-family: 'Helvetica-Neue', Helvetica, Arial, sans-serif;
+    font-size: 1em;
+}
+
+body {
+    background-color: #fafafa;
+    font-size: 62.5%;
+    color: #444;
+    padding: 0;
+    margin: 2em;
+}
+
+header, h1, h2, h3 { 
+    font-family: Georgia, Serif;
+	font-weight: bold;
+	font-style: italic;
+    color: #333;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+    font-size: 4em;
+    padding-bottom: 0.2em;
+    margin-bottom: 1em;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #ccc;
+}
+
+.example h2 {
+    font-size: 2.2em;
+}
+
+pre {
+    font-size: 1.8em;
+}
+
+label {
+    font-size: 1.4em;
+}
+
+/* Prettify Fix */
+ol.linenums {
+    margin: 0;
+}
